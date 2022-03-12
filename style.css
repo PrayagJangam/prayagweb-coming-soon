@@ -1,0 +1,329 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Fira Code', monospace;
+}
+
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #fff
+	url('preloader/preloader01.gif')
+	 no-repeat center center;	
+	z-index: 99999;
+}
+.container
+{
+	width: 100vw;
+	height: 100vh;
+	background-image: url(images/background.png);
+	background-position: center;
+	background-size: cover;
+	padding: 0 8%;
+	position: relative;
+}
+.logo
+{	
+	color: #fff;
+	padding: 20px 0;
+	cursor: pointer;
+	position: relative;
+	width: 140px;
+}
+
+h1.logo:before
+{
+	position: absolute;
+	content: "";
+	height: 5px;
+	background-color: #fff;
+	width: 0px;
+	top: 80%;
+	left: 0;
+	transition: all 0.5s linear;
+}
+h1.logo:hover:before{
+	content: "";
+	width: 135px;
+}
+.content
+{
+	top: 50%;
+	position: absolute;
+	transform: translateY(-50%);
+	color: #fff;
+}
+.content h1
+{
+	font-size: 64px;
+	font-weight: 600;
+}
+.content h1 span
+{
+	color: #ff3753;
+}
+.content .button
+{
+	background: transparent;
+	border: 2px solid #fff;
+	outline: none; 
+	padding: 12px 25px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+	cursor: pointer;
+	width: 180px;
+	text-decoration: none;
+	width: 155px;
+	text-align: center;
+	transition: 0.5s all ease-out;
+}
+.content .button:hover
+{
+	background: #fff;
+	color: #ff3753;
+	border: 1.5px solid #ff3753;
+}
+.content .button:hover fa-whatsapp
+{
+	color: #ff3753;
+}
+/*.designationbox{
+	outline: 2px solid #fff;
+	padding: 15px 50px;
+}*/
+.designation{
+	color: #ff3753;
+}
+#myBtn{
+	cursor: pointer;
+	border-radius: 30%;
+	padding: 17px;
+	background: #ff3753;
+	color: #fff;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	font-size: 20px;
+	transition: all 0.3s;
+}
+#myBtn:hover{
+	color: #ff3753;
+	background: #fff;
+}
+
+/*rocket image area start here*/
+.rocket
+{
+	width: 250px;
+	position: absolute;
+	right: 10%;
+	bottom: 0;
+	animation: rocket 4s linear infinite;
+}
+@keyframes rocket
+{
+	0%{
+		bottom: 0;
+		opacity: 0;
+	}
+	100%{
+		bottom: 105%;
+		opacity: 1;
+	}
+}
+
+.row{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 20px;
+	margin-bottom: 50px;
+	padding: 15px 25px;
+}
+html{
+	scroll-behavior: smooth;
+}
+.profile{
+	border-radius: 35%;
+	width: 100px;
+}
+.service h3{
+	margin: 10px;
+	font-weight: 600;
+	color: #ff3753;
+}
+.service p{
+	color: #762EF9;
+}
+.service{
+	text-align: center;
+	padding: 10px 10px;
+	border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	background: transparent;
+	transition: all 0.5s;
+	outline: 2px solid #762EF9;
+	box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.construction{
+	width: 250px;
+}
+/*.service:hover{
+	transform: scale(1.06);
+	box-shadow: 5px 4px 6px #ff3753;
+}*/
+/*.service:hover:nth-child(2){
+	transform: scale(1.06);
+	box-shadow: 5px 4px 6px #ff3753;
+}*/
+
+/*rocket image area end here*/
+.social_media
+{
+	position: fixed;
+	background: #fff;
+	top: 50%;
+	left: 0;
+	height: 158px;
+	width: 35px;
+	transform: translateY(-50%);
+	box-shadow: 5px 8px 7px rgba(0, 0, 0, 0.4);
+}
+.fa-whatsapp{
+	position: absolute;
+	width: 25px;
+	margin-left: 10px;
+	top: 10px;
+	color: #ff3753;
+}
+.fa-whatsapp:hover{
+	color: #762EF9;
+}
+.fa-instagram{
+	position: absolute;
+	width: 25px;
+	top: 50px;
+	margin-left: 10px;
+	color: #ff3753;
+}
+.fa-instagram:hover{
+	color: #762EF9;
+}
+.fa-youtube{
+	position: absolute;
+	width: 25px;
+	top: 90px;
+	margin-left: 10px;
+	color: #ff3753;
+}
+.fa-youtube:hover{
+	color: #762EF9;
+}
+.fa-facebook-official{
+	position: absolute;
+	width: 25px;
+	top: 130px;
+	margin-left: 10px;
+	color: #ff3753;
+}
+.fa-facebook-official:hover{
+	color: #762EF9;
+}
+
+
+/*Now Make It Responsive*/
+
+@media(max-width: 1069px)
+{
+	.content h1{
+		font-size: 50px;
+	}
+}
+@media(max-width: 1000px)
+{
+	.content h1{
+		font-size: 45px;
+	}
+	
+}
+@media(max-width: 900px)
+{	
+	.content h1{
+		font-size: 40px;
+	}
+}
+@media(max-width: 800px)
+{
+	img.rocket{
+		right: 5%;
+		width: 150px;
+	}
+	
+
+}
+@media(max-width: 767px)
+{
+	img.rocket{
+		display: none;
+	}
+	.content h1{
+		font-size: 45px;
+	}
+}
+@media(max-width: 575px)
+{
+	.content h1{
+		font-size: 40px;
+	}
+}
+@media(max-width: 543px)
+{
+	.content h1{
+		font-size: 30px;
+	}
+}
+@media(max-width: 500px){
+	#myBtn{
+	cursor: pointer;
+	border-radius: 50%;
+	padding: 15px;
+	background: #ff3753;
+	color: #fff;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	font-size: 15px;
+}
+}
+@media(max-width: 431px)
+{
+	.content h1{
+		font-size: 30px;
+	}
+}
+@media(max-width: 401px)
+{
+	.content h1{
+		font-size: 30px;
+	}
+}
+@media(max-width: 325px)
+{
+	.container{
+		padding: 20px;
+	}
+	.content p{
+		font-size: 15px;
+		margin-top: 50px;
+	}
+	.content h1{
+		font-size: 23px;
+	}
+
+}

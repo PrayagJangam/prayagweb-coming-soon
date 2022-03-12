@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Prayag Web</title>
+	<!-- linking stylesheet -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- linking FavIcon -->
+	<link rel="icon" type="icon/png" href="images/PW2.png">
+
+	<!-- linking Font-Awesome Link -->
+	<script src="https://use.fontawesome.com/e3964157db.js"></script>
+
+	<!-- linking google "Fira Code" font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+	<!-- linking scroll animation link -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body onload="myFunction()">
+	<div id="loading"></div>
+	<section id="">
+	<div class="container">
+
+		<h1 class="logo">PrayagWeb</h1>
+		<div class="content">
+			<p>Website Is Under Maintenance...</p>
+			<h1>We're <span>Launching</span> Soon</h1>
+			<img src="images/construction.png" alt="Website Development Image" class="construction">
+			<a href="#learn_more" class="button"><b>Learn More</b></a>
+		</div>
+		<img src="images/rocket.png" class="rocket">
+	</div>
+</section>
+<i class="fa fa-arrow-up" aria-hidden="true" onclick="topFunction()" id="myBtn" title="Go to top"></i>
+<div class="social_media">
+
+		<a href="https://bit.ly/3IQMcTd" class="whatAppbtn" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+
+		<a href="https://www.instagram.com/capt_prayag17/" target="_blamk"><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i></a>
+
+		<a href="https://www.youtube.com/c/youtubecreators" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+
+		<a href="" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+
+		</div>	
+	<section id="learn_more">
+	<div class="row">
+				
+
+		<div class="service">
+			<img src="images/Prayag Owner.png" alt="Owner's Photo" class="profile">
+			<h3><u>Owner</u></h3>
+			<p>Prayag Snehal Sandip Jangam</p><br>
+			<p style="color: #444;">| Developer of an entire webpage |</p>
+		</div>
+
+		<div class="service">
+			<img src="images/Sachin Guider.png" alt="Guider's Photo" class="profile">
+			<h3><u>Guider</u></h3>
+			<p>Sachin Vandana Gajanan Jangam</p><br>
+			<p style="color: #444;">| Guider for webpage design |</p>
+		</div>
+
+				
+	</div>
+	</section>
+
+
+	<!-- scripting for preloader -->
+	<script>
+		// $(document).ready(function(){
+			// 	$('div#loading').removeAttr('id');
+		// });
+		var preloader = document.getElementById("loading");
+		// window.addEventListener('load', function(){
+		// 	preloader.style.display = 'none';
+		// 	})
+
+		function myFunction(){
+			preloader.style.display = 'none';
+		};
+	</script>
+
+	<!-- script for scroll animation -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  		<script>
+    	AOS.init({
+    		offset: 200,
+    		 duration: 1800,
+    	});
+  	</script>
+
+  	<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "initial";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
